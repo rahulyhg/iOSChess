@@ -229,7 +229,7 @@ class King extends SteppingPiece {
     rightOne = board.grid[x][y + 1];
     rightTwo = board.grid[x][y + 2];
     rightRook = board.grid[x][y + 3];
-
+    debugger;
     if (leftOne === null && leftTwo === null && leftThree === null) {
       if (
         leftRook.constructor.name === "Rook" &&
@@ -244,6 +244,7 @@ class King extends SteppingPiece {
 
     if (rightOne === null && rightTwo === null) {
       if (
+        rightRook &&
         rightRook.constructor.name === "Rook" &&
         !rightRook.moved &&
         !board.inCheck(this.color) &&
